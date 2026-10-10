@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Has Baby Eaten Enough</title>
+<style>
+  :root {
+    --fg: #1f2933;
+    --muted: #52606d;
+    --accent: #0a84ff;
+    --bg: #ffffff;
+    --card: #f7f8fa;
+    --border: #e4e7eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #e4e7eb;
+      --muted: #9aa5b1;
+      --accent: #4aa3ff;
+      --bg: #15181c;
+      --card: #1e2229;
+      --border: #2a3038;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 32px 0 8px;
+    letter-spacing: -0.005em;
+  }
+  h3 {
+    font-size: 1rem;
+    margin: 20px 0 4px;
+  }
+  p, ul { margin: 8px 0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .callout {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 16px 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.92em;
+    background: var(--card);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <div class="meta">Has Baby Eaten Enough — Last updated: October 9, 2026</div>
+
+  <div class="callout">
+    <strong>Short version:</strong> This app runs entirely on your device. We do not operate a backend, we do not have user accounts, and we do not collect, sell, or share your personal data. The sections below explain the few third parties that come into play (purchase processing, device-to-device sync, voice recognition) and exactly what information reaches them.
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>Has Baby Eaten Enough ("the App") is a baby tracker iOS application developed and operated by an independent developer ("we", "us"). This Privacy Policy explains how the App handles information when you install and use it.</p>
+
+  <h2>2. Data We Collect</h2>
+  <p><strong>We do not collect, store, or transmit any personal information to servers under our control.</strong> We do not operate a backend. We do not require you to create an account. We have no visibility into any data you enter in the App.</p>
+  <p>All information you record in the App — including baby profiles, feeding logs, sleep logs, diaper logs, growth measurements, photos attached to logs, teeth records, and app preferences — is stored <strong>locally on your device</strong> using the operating system's standard application storage (IndexedDB and the iOS application sandbox). If you uninstall the App, iOS deletes this data along with the App.</p>
+
+  <h2>3. Analytics, Advertising, and Tracking</h2>
+  <p>The App contains <strong>no analytics SDKs, no advertising SDKs, and no third-party tracking of any kind</strong>. We do not use cookies. We do not profile users. We do not share data with data brokers.</p>
+
+  <h2>4. Device Permissions</h2>
+  <p>The App may ask you for the following device permissions. Each is used only for the stated purpose and only while you are actively using the related feature:</p>
+  <ul>
+    <li><strong>Microphone</strong> — Required to record voice when you tap the voice-logging button. See Section 5 for how voice is processed.</li>
+    <li><strong>Speech Recognition</strong> — Required so iOS can transcribe your spoken log into text. See Section 5.</li>
+    <li><strong>Camera</strong> — Required when you choose to attach a photo to a log by taking a new picture, and when you scan a QR code to pair with another device.</li>
+    <li><strong>Photo Library</strong> — Required when you choose to attach an existing photo to a log.</li>
+    <li><strong>Local Network</strong> — Required if you choose to pair with another device on your Wi-Fi to sync logs. See Section 6.</li>
+  </ul>
+  <p>You can revoke any of these permissions at any time in iOS Settings → Has Baby Eaten Enough.</p>
+
+  <h2>5. Voice Logging and Speech Recognition</h2>
+  <p>When you use voice input, the App forwards your audio to the iOS Speech Recognition framework (<code>SFSpeechRecognizer</code>) provided by Apple. Depending on your device, language, and iOS version, Apple may process the audio on-device, or Apple may send short audio snippets to Apple's servers for transcription. The transcribed text is returned to the App, which then interprets it locally into a log entry. We do not store or forward the raw audio ourselves, and the App does not transmit the audio to any server operated by us.</p>
+  <p>Apple's handling of speech data is governed by Apple's own privacy policy, available at <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>.</p>
+
+  <h2>6. Device-to-Device Sync (Optional)</h2>
+  <p>The App includes an optional pairing feature that lets two devices on the same account or household keep their logs in sync. When you choose to pair, the App uses peer-to-peer WebRTC connections provided by the open-source <a href="https://peerjs.com/">PeerJS</a> library.</p>
+  <p>To establish a peer-to-peer connection, the App briefly contacts the PeerJS public signaling server (operated by the PeerJS project) to exchange connection handshake metadata — specifically, randomly-generated peer identifiers derived from your device ID and standard WebRTC ICE candidates (network addresses used for connection setup). <strong>No log content, no photos, and no personal information pass through the PeerJS signaling server.</strong> Once the connection is established, log and photo sync happens directly between your paired devices.</p>
+  <p>If you never enable pairing, the App never contacts the PeerJS signaling server.</p>
+
+  <h2>7. In-App Purchases</h2>
+  <p>The App offers an optional one-time "Pro" upgrade purchased through Apple's In-App Purchase system. We use <a href="https://www.revenuecat.com/">RevenueCat</a> (operated by RevenueCat, Inc.) to manage purchase receipts and entitlements. When you make a purchase or restore purchases:</p>
+  <ul>
+    <li>Apple processes the payment under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
+    <li>Apple provides the App with a receipt. The App forwards the receipt to RevenueCat, which validates it and returns an entitlement status indicating whether Pro features should be unlocked. RevenueCat may associate the receipt with an anonymous app-user identifier generated by the App.</li>
+    <li>RevenueCat's handling of this data is governed by its own privacy policy, available at <a href="https://www.revenuecat.com/privacy/">https://www.revenuecat.com/privacy/</a>.</li>
+  </ul>
+  <p>We do not receive your name, email, payment card, or any other direct identifier from Apple or RevenueCat.</p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>The App is designed for <strong>parents and caregivers</strong> who record information about their own baby. It is not directed to children under 13, and we do not knowingly collect any information from children. The baby-related information you enter is yours as the parent/caregiver, is stored only on your device, and is not transmitted to us.</p>
+
+  <h2>9. Data Retention and Deletion</h2>
+  <p>Because the App stores everything locally on your device, you are in full control of retention and deletion:</p>
+  <ul>
+    <li>Delete individual logs from within the App at any time.</li>
+    <li>Clear all app data from iOS Settings or by uninstalling the App — this removes everything.</li>
+  </ul>
+  <p>If you have paired devices, deleting data on one device will propagate the deletion to any paired device the next time they are both online on the same network.</p>
+
+  <h2>10. International Transfers</h2>
+  <p>Because we do not operate servers and do not receive your data, we do not transfer your personal data across borders. The third parties listed above (Apple, RevenueCat, PeerJS) operate their own infrastructure and are responsible for any cross-border transfer under their own policies.</p>
+
+  <h2>11. Your Rights</h2>
+  <p>Since all your in-app data is already on your device under your sole control, you can access, correct, export, or delete it directly through the App without needing to contact us. If you have questions about this policy or wish to exercise any statutory right under applicable law (including the GDPR, UK GDPR, or CCPA), contact us using the email below.</p>
+
+  <h2>12. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect the most recent revision. Material changes will be noted in the App's release notes.</p>
+
+  <h2>13. Contact</h2>
+  <p>If you have any questions about this Privacy Policy or the App's data practices, contact us at:</p>
+  <p><strong><a href="mailto:sugarlabs@icloud.com">sugarlabs@icloud.com</a></strong></p>
+
+  <footer>
+    &copy; 2026 Has Baby Eaten Enough.
+  </footer>
+</main>
+</body>
+</html>
